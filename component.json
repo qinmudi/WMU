@@ -1,0 +1,10 @@
+{
+    "name": "wiiui",
+    "description": "简单小巧的移动端UI框架",
+    "repos": "https://github.com/qinmudi/wii-h5",
+    "main": "wiiui.js",
+    "tag": "",
+    "reposType": "npm",
+    "dependencies": {},
+    "version": "1.0.0"
+}
