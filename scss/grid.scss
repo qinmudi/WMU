@@ -1,0 +1,51 @@
+//栅格系统要整体重写
+
+// /* === Grid === */
+// $cols: 5, 10, 15, 20, 25, (100/3), 40, 50, 60, 100*(2/3), 75, 80, 85, 90, 95, 100;
+
+// @mixin offset($len,$gutter) {
+// 	@each $index in $len{
+// 		$className:floor($index);
+// 		$n:100/$index;
+// 		$d:(100-$gutter*$n)/$n;
+// 		@if $n == 1{
+// 			$d:floor($index)-$gutter*$n/$n;
+// 		}
+// 		.col-#{$className}{
+//             margin-left:#{$gutter}%;
+// 			width:#{$d}%;
+// 		}
+// 		&.no-gutter{
+// 			$gd:(100/$n);
+// 			.col-#{$className}{
+// 				margin-left:0;
+// 				@if $n == 1{
+// 					width:#{$index}%;
+// 				}@else{
+// 					width:#{$d}%;
+// 				}
+            	
+// 			}
+// 		}
+// 	}
+// }
+
+// .row {
+//     overflow: hidden;
+//     margin-left: -4%;
+//     > [class*="col-"], > [class*="tablet-"] {
+//         box-sizing: border-box;
+//         float: left;
+//     }
+//     &.no-gutter {
+//         margin-left: 0;
+//     }
+//     $gutter:4;
+//     @include offset($cols,$gutter);
+
+//     @media all and (min-width:768px) {
+// 		margin-left: -2%;
+// 		$gutter:2;
+// 		// @include offset($cols,$gutter);	
+// 	}
+// }

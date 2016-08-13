@@ -1,0 +1,78 @@
+@import "mixins";
+
+.actions-modal{
+	.standard-info{
+		padding: #{(20/2/20)}rem #{(40/2/20)}rem;
+		>div{
+			margin: #{(10/2/20)}rem 0;
+		}
+		.standard-btn{
+			padding: #{(10/2/20)}rem #{(35/2/20)}rem;
+			margin: #{(10/2/20)}rem #{(10/2/20)}rem #{(10/2/20)}rem 0;
+			border:solid 1px #979797;
+			text-align: center;
+			display: inline-block;
+			border-radius: #{(5/2/20)}rem;
+			&.activate{
+				background:#E04B43;
+				border:solid 1px #E04B43;
+				color:#fff;
+			}
+		}
+		.standard-item-right{
+			float: right;
+		}
+	}
+	.item-price{
+		>span.sku-price{
+			color:#D0021B;
+			font-size: #{(40/2/20)}rem;
+			margin-right: #{(15/2/20)}rem;
+		}
+	}
+	.content{
+		font-size: #{(28/2/20)}rem;
+		p{
+			margin: #{(10/2/20)}rem;
+			color: $color-gray;
+			&.service-title{
+				margin: #{(20/2/20)}rem 0;
+				font-size: #{(30/2/20)}rem;
+				color: $color-text;
+				i{
+					color: $color-blue;
+					margin-right: #{(15/2/20)}rem;
+				}
+			}
+		}
+	}
+}
+
+//计算器样式
+.calculator{
+	@include flexbox();
+	border:solid 1px #686868;
+	p{
+		margin:0;
+		width: #{(100/2/20)}rem;
+		height: #{(80/2/20)}rem;
+		input{
+			width:100%;
+			height:100% !important;
+			text-align: center;
+			line-height: 100%;
+			border:none;
+			border-left: solid 1px #686868 !important;
+			border-right: solid 1px #686868 !important;
+		}
+	}
+	.btns{
+		line-height: #{(80/2/20)}rem;
+		text-align: center;
+		font-size: 20px;
+		cursor: pointer;
+		a{
+			display:block;
+		}
+	}
+}

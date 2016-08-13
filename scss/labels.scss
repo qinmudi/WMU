@@ -1,0 +1,76 @@
+@import "mixins";
+//
+// Labels
+// --------------------------------------------------
+$gray-base:              #000 !default;
+$label-color:$color-text !default;
+$label-link-hover-color:#fff !default;
+$label-default-bg:lighten($gray-base, 46.7%) !default;
+$label-primary-bg:darken(#428bca, 6.5%) !default;
+$label-success-bg:#5cb85c !default;
+$label-info-bg:#5bc0de !default;
+$label-warning-bg:#f0ad4e !default;
+$label-danger-bg:#d9534f !default;
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: $label-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+
+  // [converter] extracted a& to a.label
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Add hover effects, but only for links
+a.label {
+  &:hover,
+  &:focus {
+    color: $label-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default {
+  @include label-variant($label-default-bg);
+}
+
+.label-primary {
+  @include label-variant($label-primary-bg);
+}
+
+.label-success {
+  @include label-variant($label-success-bg);
+}
+
+.label-info {
+  @include label-variant($label-info-bg);
+}
+
+.label-warning {
+  @include label-variant($label-warning-bg);
+}
+
+.label-danger {
+  @include label-variant($label-danger-bg);
+}

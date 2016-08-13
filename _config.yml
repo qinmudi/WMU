@@ -1,0 +1,15 @@
+# Meta data
+name:         WMU
+authors:      区域业务平台前端开发组
+description:  简单易用的移动端 UI 框架
+version:      0.0.1
+
+# Dependencies
+highlighter: pygments # or rouge or null
+markdown: redcarpet
+
+# Server
+source:       docs
+port:         8888
+
+exclude: ["node_modules", "gulpfile.js", "package.json"]
